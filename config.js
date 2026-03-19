@@ -6,7 +6,7 @@ const CONFIG = {
 
   /* ── IDENTITY ── */
   name:       "Your Name",
-  navBrand:   "$ vlsi-engineer.dev",
+  navBrand:   "$ digital-design-engineer.dev",
   heroTag:    "VLSI · Embedded Systems · RTL Design",
   heroHeading: `Designing silicon that powers the <em>real world.</em>`,
   heroDesc:   "I'm a hardware engineer specialising in VLSI design and embedded firmware — working at the intersection of transistors, timing constraints, and real-time software.",
@@ -19,7 +19,7 @@ const CONFIG = {
   ── */
   chip: {
     filename: "top_module.v",
-    process:  "TSMC 28nm",
+    process:  "TSMC 40nm",
     code: `<span class="c-cm">// 32-bit RISC-V processor core</span>
 <span class="c-kw">module</span> <span class="c-fn">cpu_core</span> (
   <span class="c-kw">input</span>  <span class="c-type">wire</span>        clk,
@@ -35,7 +35,7 @@ const CONFIG = {
 
   /* ── HERO STATS — add or remove objects freely ── */
   stats: [
-    { value: "28nm", label: "Min Process" },
+    { value: "40nm", label: "Min Process" },
     { value: "12+",  label: "Tape-outs"   },
     { value: "5+",   label: "Yrs Exp"     },
   ],
@@ -95,8 +95,8 @@ const CONFIG = {
       featured: true,
       category: "RTL · VLSI",
       name: "32-bit RISC-V RV32I Processor Core",
-      desc: "A fully synthesisable, 5-stage pipelined RISC-V RV32I core in SystemVerilog with full hazard detection, forwarding, branch prediction, and AXI4-Lite memory interface. Synthesised on TSMC 28nm achieving 500 MHz at typical corner. Verified via UVM testbench at 98% functional coverage.",
-      tags:  ["SystemVerilog", "UVM", "Cadence Genus", "AXI4", "TSMC 28nm"],
+      desc: "A fully synthesisable, 5-stage pipelined RISC-V RV32I core in SystemVerilog with full hazard detection, forwarding, branch prediction, and AXI4-Lite memory interface. Synthesised on TSMC 40nm achieving 500 MHz at typical corner. Verified via UVM testbench at 98% functional coverage.",
+      tags:  ["SystemVerilog", "UVM", "Cadence Genus", "AXI4", "TSMC 40nm"],
       links: [{ label: "paper ↗", url: "#" }, { label: "github ↗", url: "#" }],
     },
     {
@@ -136,7 +136,7 @@ const CONFIG = {
       company: "Acme Semiconductors",
       role:    "Senior VLSI Design Engineer",
       dept:    "Digital Implementation · Chennai, India",
-      desc:    "Led RTL-to-GDSII flow for a low-power IoT SoC on TSMC 28nm. Improved timing closure time by 35% through scripted constraint automation in Tcl. Mentored junior engineers on back-end flows and UVM methodology.",
+      desc:    "Led RTL-to-GDSII flow for a low-power IoT SoC on TSMC 40nm. Improved timing closure time by 35% through scripted constraint automation in Tcl. Mentored junior engineers on back-end flows and UVM methodology.",
       chips:   ["Cadence Innovus", "Genus", "Tempus STA", "SystemVerilog", "UVM"],
     },
     {
@@ -180,9 +180,9 @@ const CONFIG = {
   contactDesc: "Whether it's a design review, a consulting engagement, or just a conversation about low-power design — feel free to reach out.",
   email: "hello@yourname.dev",
   socials: [
-    { label: "GitHub",         url: "https://github.com/yourusername"  },
-    { label: "LinkedIn",       url: "https://linkedin.com/in/yourname" },
-    { label: "Google Scholar", url: "https://scholar.google.com"       },
+    { label: "GitHub",         url: "https://github.com/yeshvanth-m"  },
+    { label: "LinkedIn",       url: "https://linkedin.com/in/yeshvanth-m" },
+    { label: "YouTube",         url: "https://www.youtube.com/@ymlabs6983" },
     { label: "Résumé ↓",       url: "/resume.pdf"                      },
   ],
 };
