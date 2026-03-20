@@ -70,8 +70,8 @@ const CONFIG = {
   /* ── HERO STATS — add or remove objects freely ── */
   stats: [
     { value: "40nm", label: "Min Process" },
-    { value: "3+",  label: "Tape-outs"    },
-    { value: "5+",   label: "Yrs Exp"     },
+    { value: "3+",   label: "Tape-outs"   },
+    { value: "4+",   label: "Yrs Exp"     },
   ],
 
   /* ── ABOUT ── */
@@ -88,9 +88,9 @@ const CONFIG = {
     { key: "Firmware",   value: "C, C++, Python, Assembly"         },
     { key: "EDA Tools",  value: "Cadence Xcelium, Genus, Innovus"  },
     { key: "Simulation", value: "VCS, ModelSim, MATLAB/Simulink"   },
-    { key: "Protocols",  value: "I²C, SPI, UART, CAN, AXI4, APB"   },
+    { key: "Protocols",  value: "I²C, SPI, UART, CAN, AXI4, APB"  },
     { key: "RTOS",       value: "FreeRTOS, Zephyr"                 },
-    { key: "Platforms",  value: "ARM Cortex-M, AMD SoC FPGAs"     },
+    { key: "Platforms",  value: "ARM Cortex-M, AMD SoC FPGAs"      },
   ],
 
   /* ── SKILL DOMAINS ──
@@ -119,8 +119,8 @@ const CONFIG = {
     },
     {
       title: "Hardware Platforms",
-      color: "tc",
-      tags:  ["AMD Spartan-7", "AMD Artix-7", "AMD Zynq-7000", "AMD Zynq Ultrascale+ MPSoC", " STM32F746-Discovery", "STM32F4 Series"],
+      color: "tb",
+      tags:  ["AMD Spartan-7", "AMD Artix-7", "AMD Zynq-7000", "AMD Zynq Ultrascale+ MPSoC", "STM32F746-Discovery", "STM32F4 Series"],
     },
   ],
 
@@ -132,39 +132,42 @@ const CONFIG = {
   projects: [
     {
       featured: true,
-      category: "Digital VLSI · FPGA  · Embedded",
+      category: "Digital VLSI · FPGA · Embedded",
       name: "CNN HW Accelerator for Handwritten Digit Recognition",
       desc: "Custom CNN accelerator in Verilog for MNIST digit recognition. Implemented on AMD Zynq-7000 FPGA with an ARM Cortex-A9 host. DMA driver implemented in Pynq Python API for data transfer and control.",
       tags:  ["Verilog", "FPGA", "CNN", "MNIST"],
-      links: [{  label: "Blog ↗", url: "https://community.element14.com/challenges-projects/design-challenges/eye-on-intelligence-challenge/b/blog/posts/final-blog-handwritten-recognition-with-custom-cnn-hw-accelerator", label: "Github ↗", url: "https://github.com/yeshvanth-m/CNN-Handwritten-Digit-MNIST/tree/main" }],
+      links: [
+        { label: "Blog ↗",   url: "https://community.element14.com/challenges-projects/design-challenges/eye-on-intelligence-challenge/b/blog/posts/final-blog-handwritten-recognition-with-custom-cnn-hw-accelerator" },
+        { label: "GitHub ↗", url: "https://github.com/yeshvanth-m/CNN-Handwritten-Digit-MNIST/tree/main" },
+      ],
     },
     {
       category: "Digital VLSI · FPGA",
       name: "ARM Cortex-M Based Microcontroller on FPGA",
-      desc: "A fully functional, ARM Cortex-M Microcontroller integrated and verified on AMD Spartan-7 FPGA. Synthesized and Implemented in Vivado.",
+      desc: "A fully functional ARM Cortex-M Microcontroller integrated and verified on AMD Spartan-7 FPGA. Synthesized and implemented in Vivado.",
       tags:  ["Vivado", "AXI4-Lite", "AMD Spartan-7"],
       links: [{ label: "YouTube ↗", url: "https://youtu.be/AsovjL7FLLo?si=WcXaA02M4VlKGNAY" }],
     },
     {
       category: "Cryptography · FPGA",
       name: "AES-128 Hardware Accelerator",
-      desc: "AES-128 core in Verilog on AMD Zynq Ultrascale+ MPSoC. Integrated as an AXI4-Lite peripheral and verified Vitis SDK. PL Fabric at 100 MHz.",
+      desc: "AES-128 core in Verilog on AMD Zynq Ultrascale+ MPSoC. Integrated as an AXI4-Lite peripheral and verified in Vitis SDK. PL Fabric at 100 MHz.",
       tags:  ["Verilog", "Xilinx", "AXI4-Lite"],
-      links: [{ label: "github ↗", url: "https://github.com/yeshvanth-m/AES-128" }],
+      links: [{ label: "GitHub ↗", url: "https://github.com/yeshvanth-m/AES-128" }],
     },
     {
       category: "FPGA · VGA",
       name: "Pong Game on FPGA with VGA Output",
-      desc: "Implemented a classic Pong game on Cyclone-V FPGA with VGA output. Utilized Verilog for game logic and VGA controller.",
+      desc: "Implemented a classic Pong game on Cyclone-V FPGA with VGA output. Utilised Verilog for game logic and VGA controller.",
       tags:  ["Verilog", "FPGA", "VGA", "Game Design"],
       links: [{ label: "Blog ↗", url: "https://community.element14.com/challenges-projects/project14/digitalfever/b/blog/posts/prototyping-with-fpgas---final-project---pong-game" }],
     },
     {
       category: "SCPI · Instrumentation",
       name: "LiFi Audio Streaming with Red Pitaya",
-      desc: "Modulate notes with python and transmit via laser. On the receiver side, photodiode captures light signals, demodulates them, and plays audio in real-time.",
+      desc: "Modulate notes with Python and transmit via laser. On the receiver side, a photodiode captures light signals, demodulates them, and plays audio in real-time.",
       tags:  ["Python", "LiFi", "SCPI"],
-      links: [{ label: "github ↗", url: "https://github.com/yeshvanth-m/Wireless-Audio-Transmission-using-Li-Fi" }],
+      links: [{ label: "GitHub ↗", url: "https://github.com/yeshvanth-m/Wireless-Audio-Transmission-using-Li-Fi" }],
     },
   ],
 
@@ -183,7 +186,7 @@ const CONFIG = {
       company: "Analog Devices Inc.",
       role:    "Embedded Software Engineer",
       dept:    "Automotive Electrification · Bangalore, India",
-      desc:    "Re-architected firmware for fail-safe OTAP, Reduced power consumption by 25% via optimized sleep modes and peripheral management. Pre-silicon bring-up and debugging of SoC with HW-SW Co-Simulation.",
+      desc:    "Re-architected firmware for fail-safe OTAP. Reduced power consumption by 25% via optimised sleep modes and peripheral management. Pre-silicon bring-up and debugging of SoC with HW-SW Co-Simulation.",
       chips:   ["C", "RTX5", "Cortex-M4/M33", "2.4GHz Radio", "Keil uVision", "Segger J-Link"],
     },
     {
@@ -191,27 +194,45 @@ const CONFIG = {
       company: "Analog Devices Inc.",
       role:    "Firmware Intern",
       dept:    "Automotive Electrification · Bangalore, India",
-      desc:    "Designed, implemented and protoyped a hand-held sniffer device for propreitaty wireless protocol in C on an ARM Cortex-M4. Developed UI on STM32F746 Discovery with TouchGFX. Presented project to senior leadership and received full-time offer.",
+      desc:    "Designed, implemented and prototyped a hand-held sniffer device for a proprietary wireless protocol in C on ARM Cortex-M4. Developed UI on STM32F746 Discovery with TouchGFX. Presented to senior leadership and received a full-time offer.",
       chips:   ["Product Development", "C++", "TouchGFX", "STM32F746", "ARM Cortex-M7"],
     },
   ],
 
-  /* ── PUBLICATIONS ── */
-  publications: [
+  /* ── OPEN SOURCE CONTRIBUTIONS ──
+     blogUrl and githubUrl are both optional — remove either key to hide that button.
+  ── */
+  contributions: [
     {
-      title: "Low-Power 10-bit SAR ADC with Dynamic Comparator in 180nm CMOS",
-      venue: "IEEE International Symposium on Circuits and Systems (ISCAS)",
-      year:  "2023",
+      title:   "Open Source Contribution : Added 2 samples to demonstrate the oberserver and broadcaster roles in BLE",
+      venue:   "Zephyr Project",
+      year:    "2021",
+      githubUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/40057",
     },
     {
-      title: "Timing Closure Optimisation in Deep-Sub-Micron Flows Using ML-Guided Buffering",
-      venue: "VLSI Design Conference (VLSID)",
-      year:  "2022",
+      title:   "Working with the Broadcom Optical Wireless Transceiver",
+      venue:   "Element14 Community",
+      year:    "2025",
+      blogUrl: "https://community.element14.com/products/roadtest/rv/roadtest_reviews/1881/working_with_the_broadcom_optical_wireless_transceiver_-_part_1",
     },
     {
-      title: "Simulated-Annealing Based Floorplanner for Mixed-Signal SoCs",
-      venue: "IEEE TENCON",
-      year:  "2020",
+      title:     "Bench-marking Zynq Ultrascale+ MPSoC with custom built AES Core",
+      venue:     "Element14 Community",
+      year:      "2023",
+      blogUrl:   "https://community.element14.com/products/roadtest/rv/roadtest_reviews/1744/bench-marking_zynq_ultrascale_mpsoc_with_custom_built_aes_core",
+      githubUrl: "https://github.com/yeshvanth-m/ZUBoard-1CG_RT",
+    },
+    {
+      title:     "GUI Demo with S32K324 Triple PMSM Control Reference Design Board",
+      venue:     "Element14 Community",
+      year:      "2024",
+      blogUrl:   "https://community.element14.com/products/roadtest/rv/roadtest_reviews/1805/gui_demo_with_s32k324_triple_pmsm_control_reference_design_board",
+    },
+    {
+      title:     "UV-C Based Germs Disinfecting Machine",
+      venue:     "Hackster.io",
+      year:      "2020",
+      blogUrl:   "https://www.hackster.io/yeshvanth_muniraj/uv-c-based-germs-disinfecting-machine-a20020",
     },
   ],
 
@@ -219,9 +240,9 @@ const CONFIG = {
   contactDesc: "Whether it's a design review, a consulting engagement, or just a conversation about low-power design — feel free to reach out.",
   email: "yeshvanthmuniraj123@gmail.com",
   socials: [
-    { label: "GitHub",    url: "https://github.com/yeshvanth-m"           },
-    { label: "LinkedIn",  url: "https://linkedin.com/in/yeshvanthm"      },
-    { label: "YouTube",   url: "https://www.youtube.com/@ymlabs6983"      },
-    { label: "Résumé ↓",  url: "/resume.pdf"                              },
+    { label: "GitHub",   url: "https://github.com/yeshvanth-m"      },
+    { label: "LinkedIn", url: "https://linkedin.com/in/yeshvanthm"  },
+    { label: "YouTube",  url: "https://www.youtube.com/@ymlabs6983" },
+    { label: "Résumé ↓", url: "/resume.pdf"                         },
   ],
 };
