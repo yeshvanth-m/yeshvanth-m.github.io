@@ -28,7 +28,7 @@ const CONFIG = {
   <span class="c-kw">output</span> <span class="c-type">reg</span>  [<span class="c-num">31</span>:<span class="c-num">0</span>] pc); <br>
   <span class="c-cm">// IF → ID → EX → MEM → WB</span> <br>
   <span class="c-kw">always</span> @(<span class="c-kw">posedge</span> clk) <br>
-    <span class="c-kw">if</span> (!rst_n) pc &lt;= <span class="c-num">32'h0</span>; <br>
+    <span class="c-kw">if</span> (rst_n) pc &lt;= <span class="c-num">32'h0</span>; <br>
     <span class="c-kw">else</span> pc <= pc + 4; <br>
 <span class="c-kw">endmodule</span>`,
   },
@@ -84,13 +84,13 @@ const CONFIG = {
 
   /* ── SPEC TABLE — rows in the about section ── */
   specs: [
-    { key: "HDL",        value: "Verilog, SystemVerilog"           },
-    { key: "Firmware",   value: "C, C++, Python, Assembly"         },
-    { key: "EDA Tools",  value: "Cadence Xcelium, Genus, Innovus"  },
-    { key: "Simulation", value: "VCS, ModelSim, MATLAB/Simulink"   },
-    { key: "Protocols",  value: "I²C, SPI, UART, CAN, AXI4, APB"  },
-    { key: "RTOS",       value: "FreeRTOS, Zephyr"                 },
-    { key: "Platforms",  value: "ARM Cortex-M, AMD SoC FPGAs"      },
+    { key: "HDL",        value: "Verilog, SystemVerilog"             },
+    { key: "Firmware",   value: "C, C++, Python, Assembly"           },
+    { key: "EDA Tools",  value: "AMD Vivado, Cadence Genus, Innovus" },
+    { key: "Simulation", value: "Cadence Xcelium, MATLAB/Simulink"   },
+    { key: "Protocols",  value: "I²C, SPI, UART, CAN, AXI4, APB"     },
+    { key: "RTOS",       value: "RTX5, FreeRTOS, Zephyr"             },
+    { key: "Platforms",  value: "ARM Cortex-M MCUs, AMD SoC FPGAs"   },
   ],
 
   /* ── SKILL DOMAINS ──
@@ -98,27 +98,27 @@ const CONFIG = {
   ── */
   skills: [
     {
-      title: "RTL & Digital Design",
+      title: "RTL & Digital Design (Core)",
       color: "tb",
       tags:  ["Verilog", "SystemVerilog", "VHDL", "FSM Design", "Pipelining"],
     },
     {
-      title: "Physical Design & Verification",
+      title: "Physical Design & Verification (Know-How)",
       color: "tt",
-      tags:  ["Synthesis", "STA", "P&R", "DRC / LVS", "UVM", "Formal Verification"],
+      tags:  ["Synthesis", "STA", "P&R", "DRC / LVS", "UVM"],
     },
     {
-      title: "Embedded Firmware",
+      title: "Embedded Firmware (Core)",
       color: "ta",
       tags:  ["C / C++", "FreeRTOS", "Zephyr", "ARM Cortex-M", "Bare-metal"],
     },
     {
-      title: "Interfaces & Protocols",
+      title: "Interfaces & Protocols (Expertise)",
       color: "tv",
-      tags:  ["I²C", "SPI", "UART", "CAN", "AXI4", "APB"],
+      tags:  ["AXI4", "AHB", "APB", "SPI", "UART", "I²C", "CAN"],
     },
     {
-      title: "Hardware Platforms",
+      title: "Hardware Platforms (Exposure)",
       color: "tb",
       tags:  ["AMD Spartan-7", "AMD Artix-7", "AMD Zynq-7000", "AMD Zynq Ultrascale+ MPSoC", "STM32F746-Discovery", "STM32F4 Series"],
     },
